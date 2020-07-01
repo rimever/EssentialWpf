@@ -1,0 +1,33 @@
+﻿<Window x:Class="Chapter4_9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chapter4_9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Canvas HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure">
+                <Button Canvas.Right="2" Canvas.Top="2">Top,Right</Button>
+                <Button Canvas.Left="2" Canvas.Top="2">Top,Left</Button>
+                <Button Canvas.Right="2" Canvas.Bottom="2">Bottom,Right</Button>
+                <Button Canvas.Left="2" Canvas.Bottom="2">Bottom,Left</Button>
+                <Button Canvas.Right="20" Canvas.Top="20" Canvas.Left="20" Canvas.Bottom="20">４つすべて</Button>
+            </Canvas>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Button>ボタン1</Button>
+            <Button>ボタン2</Button>
+            <Canvas HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Canvas.Right="4" Canvas.Bottom="10">
+                    Canvas内のボタン
+                </Button>
+            </Canvas>
+        </StackPanel>
+    </Grid>
+</Window>
