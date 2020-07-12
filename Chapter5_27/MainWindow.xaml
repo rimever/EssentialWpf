@@ -1,0 +1,24 @@
+﻿<Window x:Class="Chapter5_27.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chapter5_27"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Rectangle Width="100" Height="100">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Offset="0" Color="#FFFF0000"/>
+                        <GradientStop Offset=".33" Color="#9900FF00"/>
+                        <GradientStop Offset=".66" Color="#FF0000FF"/>
+                        <GradientStop Offset="9" Color="#00FFFFFF"/>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+    </Grid>
+</Window>
