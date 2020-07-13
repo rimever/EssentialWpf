@@ -1,0 +1,27 @@
+﻿<Window x:Class="Chapter4_15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chapter4_15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+<Grid.RowDefinitions>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Button DockPanel.Dock="Top">メニュー領域（Dock=Top）</Button>
+            <Button DockPanel.Dock="Top">ツールバー領域（Dock=Top）</Button>
+            <Button DockPanel.Dock="Left">フォルダ（Dock=Left）</Button>
+            <Button>コンテンツ(LastChildFill=trueなので、残りの領域を占有)</Button>
+        </DockPanel>
+<DockPanel Grid.Row="1">
+    <Button DockPanel.Dock="Top">メニュー領域（Dock=Top）</Button>
+    <Button DockPanel.Dock="Left">フォルダ（Dock=Left）</Button>
+    <Button DockPanel.Dock="Top">ツールバー領域（Dock=Top）</Button>
+    <Button>コンテンツ(LastChildFill=trueなので、残りの領域を占有)</Button>
+</DockPanel>
+    </Grid>
+</Window>

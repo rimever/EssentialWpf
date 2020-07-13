@@ -1,0 +1,25 @@
+﻿<Window x:Class="Chapter5_52.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chapter5_52"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <FlowDocument>
+        <Paragraph FontSize="24pt" KeepWithNext="True">見出し 2</Paragraph>
+        <Paragraph>
+            <Floater Width="200">
+                <BlockUIContainer>
+                    <StackPanel>
+                        <Image Width="200"  Height="200" Source="image.png"/>
+                        <TextBlock FontWeight="Bold">画像浮遊要素</TextBlock>
+                    </StackPanel>
+                </BlockUIContainer>
+            </Floater>
+            Praesent ut nibh ... 
+        </Paragraph>
+        <Paragraph>Cras imperdiet ...</Paragraph>
+        <Paragraph Typography.DiscretionaryLigatures="True">1..2..3..1/2,1/3, The Quick brown fox...</Paragraph>
+    </FlowDocument>
+</Window>

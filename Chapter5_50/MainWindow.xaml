@@ -1,0 +1,40 @@
+﻿<Window x:Class="Chapter5_50.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chapter5_50"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <FlowDocument>
+        <Paragraph>これは簡単なリストです。</Paragraph>
+        <List>
+            <ListItem><Paragraph>項目 1</Paragraph></ListItem>
+            <ListItem><Paragraph>項目 2</Paragraph>
+                <List Margin="0">
+                    <ListItem>
+                        <Paragraph>サブ項目 1</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>サブ項目 2</Paragraph>
+                    </ListItem>
+                </List>
+            </ListItem>
+        </List>
+        <Paragraph BreakColumnBefore="True">リストではさまざまなマークを使用できます</Paragraph>
+        <List MarkerStyle="Decimal">
+            <ListItem><Paragraph>項目 1</Paragraph></ListItem>
+            <ListItem>
+                <Paragraph>項目 2</Paragraph>
+                <List Margin="0" MarkerStyle="Box">
+                    <ListItem>
+                        <Paragraph>サブ項目 1</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>サブ項目 2</Paragraph>
+                    </ListItem>
+                </List>
+            </ListItem>
+        </List>
+    </FlowDocument>
+</Window>

@@ -1,0 +1,51 @@
+﻿<Window x:Class="Chapter4_4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chapter4_4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+<Grid.RowDefinitions>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Background="Aqua" Orientation="Horizontal">
+            <Button Width="75" Height="25">15</Button>
+            <Button Width="75" Height="25">45</Button>
+            <Button Width="75" Height="25">65</Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Background="Pink" Orientation="Horizontal">
+            <Button Width="75" Height="25">
+                <Button.RenderTransform><RotateTransform Angle="15"/></Button.RenderTransform>
+                15
+            </Button>
+            <Button Width="75" Height="25">
+                <Button.RenderTransform>
+                    <RotateTransform Angle="45"/>
+                </Button.RenderTransform> 45</Button>
+            <Button Width="75" Height="25">
+                <Button.RenderTransform>
+                    <RotateTransform Angle="65"/>
+                </Button.RenderTransform> 65</Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Background="Aqua" Orientation="Horizontal">
+            <Button Width="75" Height="25">
+                <Button.LayoutTransform><RotateTransform Angle="15"/></Button.LayoutTransform>
+                15</Button>
+            <Button Width="75" Height="25">
+                <Button.LayoutTransform>
+                    <RotateTransform Angle="45"/>
+                </Button.LayoutTransform>
+                45</Button>
+            <Button Width="75" Height="25">
+                <Button.LayoutTransform>
+                    <RotateTransform Angle="65"/>
+                </Button.LayoutTransform>
+                65</Button>
+        </StackPanel>
+
+</Grid>
+</Window>

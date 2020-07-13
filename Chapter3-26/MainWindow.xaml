@@ -1,0 +1,15 @@
+﻿<Window x:Class="Chapter3_26.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chapter3_26"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="120" Width="250">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="5">
+            <TextBlock Name="TextBlock1" Margin="10"/>
+            <Slider Name="Slider1" Width="75" Minimum="0" Maximum="255" Value="255" ValueChanged="Slider1OnValueChanged"></Slider>
+        </StackPanel>
+    </Grid>
+</Window>
