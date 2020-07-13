@@ -1,0 +1,19 @@
+﻿<Window x:Class="Chapter6_8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chapter6_8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+<StackPanel>
+    <ContentControl Content="{Binding Path=Name.Full}"/>
+    <TextBlock Text="{Binding Path=Addresses[0].AddressName}"/>
+    <TextBlock Text="{Binding Path=Addresses[0].Zip}"/>
+    <TextBlock Text="{Binding Path=Addresses[0].Province}"/>
+    <TextBlock Text="{Binding Path=Addresses[0].City}"/>
+    <TextBlock Text="{Binding Path=Addresses[0].Street}"/>
+</StackPanel>
+    </Grid>
+</Window>
