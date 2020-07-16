@@ -1,0 +1,47 @@
+﻿<Window x:Class="Chapter6_10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chapter6_10"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance local:Person}"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <StackPanel.Resources>
+            <DataTemplate x:Key="AddressTemplate" DataType="local:Address">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Path=Zip}"/>
+                    <TextBlock Text=" "/>
+                    <TextBlock Text="{Binding Path=Province}"/>
+                    <TextBlock Text="{Binding Path=City}"/>
+                    <TextBlock Text="{Binding Path=Street}"/>
+                </StackPanel>
+            </DataTemplate>
+        </StackPanel.Resources>
+        <TextBlock Margin="5" FontSize="14">住所:</TextBlock>
+        <ListBox ItemsSource="{Binding Addresses}" ItemTemplate="{DynamicResource AddressTemplate}"/>
+
+        <TextBlock Margin="5" FontSize="14">新しい住所を追加:</TextBlock>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition/><RowDefinition/><RowDefinition/>
+                <RowDefinition/><RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0">郵便番号</Label>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="TextBoxZip"/>
+        <Label Grid.Row="1" Grid.Column="0">都道府県</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="TextBoxProvince"/>
+        <Label Grid.Row="2" Grid.Column="0">市区町村</Label>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="TextBoxCity"/>
+        <Label Grid.Row="3" Grid.Column="0">番地</Label>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="TextBoxStreet"/>
+        <Label Grid.Row="4" Grid.Column="0">郵便番号</Label>
+        <Button Click="AddAddress" Grid.Row="4">追加</Button>
+        </Grid>
+    </StackPanel>
+</Window>
